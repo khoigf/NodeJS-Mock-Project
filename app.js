@@ -6,7 +6,7 @@ const app = express() //app express
 const port = 8080 // port
 const hostname = 'localhost';
 const connection = require('./src/config/database')
-const middleware = require('./middware/middware')
+const middleware = require('./src/middlewares/middleware')
 
 //config template engine
 configViewEngine(app);

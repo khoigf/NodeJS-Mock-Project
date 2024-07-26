@@ -1,7 +1,7 @@
 const express = require('express');
-const {getHomepage} = require('../controllers/homeController')
+const { postLogin} = require('../controllers/homeController')
 const router = express.Router();
 
-router.get('/', getHomepage)
-  
+router.post('/login',postLogin)
+
 module.exports = router;
