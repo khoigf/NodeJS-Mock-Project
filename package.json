@@ -23,7 +23,10 @@
     "json2csv": "^6.0.0-alpha.2",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "multer": "^1.4.5-lts.1"
+    "msnodesqlv8": "^4.2.1",
+    "mssql": "^11.0.1",
+    "multer": "^1.4.5-lts.1",
+    "tedious": "^18.3.0"
   },
   "devDependencies": {
     "nodemon": "2.0.20"
