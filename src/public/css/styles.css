@@ -16,6 +16,11 @@ body, html {
     background-position: center;
 }
 
+.landing h1,p {
+    color: #FFFFFF;
+    display: flex;
+}
+
 .rectangle1 {
     position: absolute;
     width: 100%;
