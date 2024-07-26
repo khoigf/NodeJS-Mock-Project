@@ -6,12 +6,14 @@ const app = express() //app express
 const port = 8080 // port
 const hostname = 'localhost';
 const connection = require('./src/config/database')
+const middleware = require('./middware/middware')
 
 //config template engine
-configViewEngine(app)
+configViewEngine(app);
+middleware(app);
 
 //khai bao route
-app.use('/',webRoutes)
+app.use('/api/auth',webRoutes)
 
 app.listen(port,hostname, () => {
   console.log(`Example app listening on port ${port}`)
