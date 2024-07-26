@@ -1,4 +1,5 @@
 /* public/js/scripts.js */
+localStorage.setItem('loggedIn', 'false');
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const username = document.getElementById('username').value;
@@ -18,7 +19,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }).then(response => response.json())
       .then(data => {
           console.log('Success:', data);
-          window.location.href = '/homepage.html';
+            // Lưu trạng thái đăng nhập vào localStorage
+            localStorage.setItem('loggedIn', 'true');
+            // Chuyển hướng đến trang chủ
+            window.location.href = '/homepage.html';
       })
       .catch((error) => {
           console.error('Error:', error);

@@ -29,12 +29,12 @@ body, html {
 }
 
 .navbar {
-    position: absolute;
-    width: 50%;
+    position: relative; /* Hoặc fixed, tùy thuộc vào yêu cầu của bạn */
+    width: 45%; /* Để nó chiếm toàn bộ chiều rộng */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 60px;
+    padding: 20px 30px; /* Giảm padding để nó không quá lớn */
     color: #FFFFFF;
 }
 
@@ -58,13 +58,6 @@ body, html {
     font-size: 18px;
     color: #FFFFFF;
     text-decoration: none;
-}
-
-.profile-icon img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: url('../img/mugshot-square\ 1.png');
 }
 
 .login-container {

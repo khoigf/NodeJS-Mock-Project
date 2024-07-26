@@ -11,8 +11,28 @@
 <body>
     <div class="landing">
         <h1>Welcome to the Homepage</h1>
-        <p>You have successfully logged in.</p>
+        <h2 id="login-message1" style="margin: 150px;"><a href="index.html">Login</a></h2>
+        <p id="login-message" style="display: none;">You have successfully logged in.</p>
     </div>
+    <script>
+        function isLoggedIn() {
+            // Trả về true nếu người dùng đã đăng nhập, ngược lại trả về false
+            return localStorage.getItem('loggedIn') === 'true';
+        }
+
+        // Hiển thị thông báo khi đăng nhập thành công
+        function showLoginMessage() {
+            const loginMessage = document.getElementById('login-message');
+            const loginMessage1 = document.getElementById('login-message1');
+            if (isLoggedIn()) {
+                loginMessage.style.display = 'block';
+                loginMessage1.style.display = 'none';
+            }
+        }
+
+        // Gọi hàm để hiển thị thông báo nếu đã đăng nhập
+        showLoginMessage();
+    </script>
 </body>
 
 </html>
